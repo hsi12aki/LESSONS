@@ -1,0 +1,39 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+int main() {
+    int day;
+    string mth;
+    
+    cout<<"Date with Diavolo:";
+    cin>>day;
+    switch (day) {
+        case 1:
+        mth = "Monday";
+        break;
+        case 2:
+        mth = "Tuesday";
+        break;
+        case 3:
+        mth = "Wednesday";
+        break;
+        case 4:
+        mth = "Thursday";
+        break;
+        case 5:
+        mth = "Friday";
+        break;
+        case 6:
+        mth = "Saturday";
+        break;
+        case 7:
+        mth = "Sunday";
+        break;
+        
+        default:
+        cout<<" is not valid.";
+    }
+    cout<<"Your date with Diavolo is on "<<mth<<"."<<endl;
+    return 0;
+}
