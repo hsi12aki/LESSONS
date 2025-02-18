@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    string name, yn;
+    int dy, mth, yr;
+    
+    cout<<"Hi! What's your name?:";
+    cin>>name;
+    
+    cout<<"I'd like to ask for your birthday, is it okay? (Yes/No):";
+    cin>>yn;
+    if (yn = "yes" || yn = "Yes"){
+    cout<<"";
+    }
+    
+    else if (yn = "no" || yn = "No" ) {
+    cout<<"";
+    
+    }
+    else{
+        cout<<"Error with your input. Refresh to try again.";
+    }
+    return 0;
+}
