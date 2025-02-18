@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    char opt, fail;
+    int num1, num2, resl;
+    
+    cout<<"Operation selection (+, -, *,/):"<<endl;
+    cin>>opt;
+    cout<<"Input first number:";
+    cin>>num1;
+    cout<<"Input second number:";
+    cin>>num2;
+    switch (opt) {
+        case '+':
+        resl = num1 + num2;
+        break;
+        case '-':
+        resl = num1 - num2;
+        break;
+        case '*':
+        resl = num1 * num2;
+        break;
+        case '/':
+        resl = num1 / num2;
+        break;
+        
+        default:
+        cout<<"The operation is not valid.";
+        resl = fail;
+    }
+    if (resl != fail)
+    cout<<"The result of "<<num1<<" and "<<num2<<" is "<<resl<<"."<<endl;
+    return 0;
+}
