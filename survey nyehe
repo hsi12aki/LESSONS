@@ -10,8 +10,13 @@ int main() {
     
     cout<<"I'd like to ask for your birthday, is it okay? (Yes/No):";
     cin>>yn;
-    if (yn = "yes" || yn = "Yes"){
-    cout<<"";
+    if (yn = "yes" || yn = "Yes")
+            cout<<"What month were you born?";
+            cin>>mth;
+            cout<<"What day were you born?";
+            cin>>dy;
+            cout<<"What year were you born?";
+            cin>>yr;
     }
     
     else if (yn = "no" || yn = "No" ) {
