@@ -1,30 +1,106 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
+//choices: update birthdate, zodiac sign, leap year ask, horoscope animal, end
+// % is modulo; not a logical operator, just a arithmetic operator
+//do-while
+
 int main() {
-    string name, yn;
-    int dy, mth, yr;
+    int chc, dy, mth, yr;
+    string zod, answ;
     
-    cout<<"Hi! What's your name?:";
-    cin>>name;
-    
-    cout<<"I'd like to ask for your birthday, is it okay? (Yes/No):";
-    cin>>yn;
-    if (yn = "yes" || yn = "Yes")
-            cout<<"What month were you born?";
+            cout<<"What month were you born? ";
             cin>>mth;
-            cout<<"What day were you born?";
+            cout<<"What day were you born? ";
             cin>>dy;
-            cout<<"What year were you born?";
+            cout<<"What year were you born? ";
             cin>>yr;
-    }
+    do{
+    cout<<"What would you like to do?"<<endl;
+    cout<<"[1] Update my birthday."<<endl;
+    cout<<"[2] Know my zodiac sign."<<endl;
+    cout<<"[3] Know if I'm born in a leap year."<<endl;
+    cout<<"[4] Know my horoscope animal."<<endl;
+    cout<<"[5] End operation."<<endl;
+    cin>>chc;
     
-    else if (yn = "no" || yn = "No" ) {
-    cout<<"";
+    switch (chc) {
+        case 1: {//update bday
+            cout<<"What month were you born? "<<endl;
+            cin>>mth;
+            cout<<"What day were you born? "<<endl;
+            cin>>dy;
+            cout<<"What year were you born? "<<endl;
+            cin>>yr;
+        break;
+        }
+        
+        case 2: {//zodiac
+            if (mth == 1 && dy >=20 || mth == 2 && dy <=18)
+            zod = "Aquarius";
+            else if (mth == 2 && dy >=19 || mth == 3 && dy <=20)
+            zod = "Pisces";
+            else if (mth == 3 && dy >=21 || mth == 4 && dy <=19)
+            zod = "Aries";
+            else if (mth == 4 && dy >=20 || mth == 5 && dy <=20)
+            zod = "Taurus";
+            else if (mth == 5 && dy >=21 || mth == 6 && dy <=21)
+            zod = "Gemini";
+            else if (mth == 6 && dy >=22 || mth == 7 && dy <=22)
+            zod = "Cancer";
+            else if (mth == 7 && dy >=23 || mth == 8 && dy <=22)
+            zod = "Leo";
+            else if (mth == 8 && dy >=23 || mth == 9 && dy <=22)
+            zod = "Virgo";
+            else if (mth == 9 && dy >=23 || mth == 10 && dy <=23)
+            zod = "Libra";
+            else if (mth == 10 && dy >=24 || mth == 11 && dy <=21)
+            zod = "Scorpion";
+            else if (mth == 11 && dy >=22 || mth == 12 && dy <=21)
+            zod = "Saggitarius";
+            else if (mth == 12 && dy >=22 || mth == 1 && dy <=19)
+            zod = "Capricorn";
+            else 
+            zod = "Invalid date.";
+            
+            cout<<"You are a "<<zod<<"."<<endl;
+        break;    
+        }
+        
+        case 3: {//leap year
+            int lp = yr % 4;
+            if (lp == 0)
+            cout<<"Your birth year is a leap year."<<endl;
+            else
+            cout<<"Your birth year is not a leap year."<<endl;
+        break;
+        }
+        
+        case 4: {// horoscope; bsd is base year; anim is zodiac animals
+            int bsd = 1900;
+    string anim[] = {"Rat", "Ox", "Tiger", "Rabbit", "Dragon", "Snake", "Horse", "Sheep", "Monkey", "Rooster", "Dog", "Pig"};
+    int zodanim = (yr - bsd) % 12;
+            if (zodanim < 0) zodanim += 12;
+            cout<<"Your zodiac is "<<anim[zodanim]<<"."<<endl;
+            break;
+            }
+            
+            //end op
+        case 5: {
+            cout<<"Operations ended."<<endl;
+        break;
+        }
+        }
+        if (chc != 5){
+        cout<<"Would you like to continue? (Yes/No): ";
+        cin>>answ;
+        if (answ == "No" || answ == "no")
+                {
+            chc = 5;
+                 }
+        }
+    } while (chc != 5);
     
-    }
-    else{
-        cout<<"Error with your input. Refresh to try again.";
-    }
     return 0;
-}
+    }
