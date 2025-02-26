@@ -1,0 +1,11 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    
+    string wow[] = {"spring", "summer", "autumn", "winter"};
+    cout<<"It's "<<wow[3]<<" season."<<endl;
+
+    return 0;
+}
