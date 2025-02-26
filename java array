@@ -1,0 +1,29 @@
+//java compiler
+import java.util.Scanner;
+
+public class UserArrayInput {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter your name: ");
+        String name = scanner.nextLine();
+        scanner.nextLine();
+        System.out.print("Enter how many elements you want in an array: ");
+        int arrn = scanner.nextInt();
+        scanner.nextLine();
+        
+        String[] array = new String[arrn];
+        
+        for (int i=0; i < array.length; i++) {
+            System.out.print("Enter element " + (i+1) + ": ");
+            array [i] = scanner.nextLine();
+            }
+            scanner.close();
+            
+            System.out.print(name +", Your array: [");
+            for (int i=0; i<array.length; i++) {
+                System.out.print(array[i]);
+                if (i<array.length-1) System.out.print(", ");
+            }
+            System.out.println("]");
+    }
+}
