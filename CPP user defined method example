@@ -15,10 +15,15 @@ void aki(){
 }
 
 int main(){
+int n1, n2;
 diavolo();
 aki();
 diavolo();
 aki();
-int a = sum(5,6);
-cout<<"The sum is "<<a;
+cout<<"enter number 1: "<<endl;
+cin>>n1;
+cout<<"enter number 2: "<<endl;
+cin>>n2;
+int a = sum(n1,n2);
+cout<<"The sum is "<<a<<".";
 }
