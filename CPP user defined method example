@@ -1,0 +1,24 @@
+//in cpp, we need to declare the smaller user defined methods first before the main
+
+#include <iostream>
+using namespace std;
+
+int sum (int a, int b){
+    return a+b;
+}
+
+void diavolo(){
+cout<<"I love Diavolo!"<<endl;
+}
+void aki(){
+    cout<<"I love Aki!!!"<<endl;
+}
+
+int main(){
+diavolo();
+aki();
+diavolo();
+aki();
+int a = sum(5,6);
+cout<<"The sum is "<<a;
+}
