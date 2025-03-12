@@ -1,0 +1,51 @@
+//practically the same as the java version
+#include <iostream>
+using namespace std;
+
+int add(int n1, int n2){
+    return n1+n2;
+}
+int sub(int n1, int n2){
+    return n1-n2;
+}
+int mul(int n1, int n2){
+    return n1*n2;
+}
+int divv(int n1, int n2){
+    return n1/n2;
+}
+
+int main(){
+int n1,n2, res;
+char ope;
+   cout<<"Enter two numbers in sequence: "<<endl;
+   cin>>n1>>n2;
+   cout<<"Choose an operator (+,-,*,/): "<<endl;
+   cin>>ope;
+   
+switch (ope) {
+        case '+':
+            res = add(n1, n2);
+            break;
+        case '-':
+            res = sub(n1, n2);
+            break;
+        case '*':
+            res = mul(n1, n2);
+            break;
+        case '/':
+            if (n2 != 0) {
+                res = divv(n1, n2);
+            } else {
+    cout<<"Error: Invalid or division by zero. Try again."<<endl;
+                return 0;
+            }
+            break;
+        default:
+                cout<<"Invalid operator."<<endl;
+                return 0;
+}
+                
+    cout<<"The total of the two numbers is "<<res<<"."<<endl;
+    
+}
