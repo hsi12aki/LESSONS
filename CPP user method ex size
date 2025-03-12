@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+class Shapes{
+    public:
+    double length, width;
+    void setDimensions(double l, double w){
+        length = l;
+        width = w;
+    }
+double getArea(){
+    return length*width;
+}
+};
+class Box:public Shapes{
+    public:
+    double height;
+    void setHeight(double h){
+        height = h;
+    }
+double getVolume(){
+    return length*width*height;
+}
+};
+int main(){
+    Shapes rect;
+    rect.setDimensions(5,10);
+    cout<<"Rectangle Area: "<<rect.getArea()<<endl;
+    
+    Box myBox;
+    myBox.setDimensions(5,10);
+    myBox.setHeight(3);
+    cout<<"Box Volume: "<<myBox.getVolume()<<endl;
+}
