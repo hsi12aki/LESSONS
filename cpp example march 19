@@ -1,0 +1,57 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include <limits>
+using namespace std;
+
+void InputSalaries (int salaries[], int numEmployees){
+    for (int i=0; i<numEmployees; i++){
+    while (true){
+        cout<<"Enter salaray for employee "<<i+1<<" :";
+        cin>>salaries[i];
+        if (cin.fail() || salaries [i] < 0){
+            cout<<"Invalid input! Salary must be a non-negative number. \n";
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(),'\n');
+        } else{
+        break;
+        }
+    }
+    }
+}
+double calculateAverage(int salaries[], int numEmployees){
+    double sum = 0;
+    for(int i=0; i< numEmployees; i++){
+        sum += salaries [i];
+    }
+    return sum/numEmployees;
+}
+int findMaxSalary (int salaries[], int numEmployees){
+    int maxSalary = salaries[0];
+    for (int i=1; i<numEmployees;i++){
+        if(salaries[i]>maxSalary){
+            maxSalary = salaries[i];
+        }
+    }
+    return maxSalary;
+}
+int findMinSalary (int salaries[], int numEmployees){
+    int minSalary = salaries[0];
+    for(int i=1; i<numEmployees;i++){
+        if (salaries[i]<minSalary){
+            minSalary = salaries[i];
+        }
+    } return minSalary;
+int main(){
+    int numEmployees;
+    cout<<"Enter the number of employees: ";
+    cin>>numEmployees;
+    if(numEmployees <= 0){
+        cout<<"Invalid number of employees: \n";
+    }
+    int salaries[numEmployees];
+    inputSalaries(salaries, numEmployees);
+    cout<<"\nAverage Salary: "<<calculateAverage(salaries, numEmployees)<<endl;
+    cout<<"Highest Salary: "<<findMaxSalary(salaries, numEmployees)<<endl;
+    cout<<"Lowest Salary: "<<findMinSalary(salaries, numEmployees)<<endl;
+}
+}
