@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class Summation {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter the number of elements: ");
+        int Summ = input.nextInt(); 
+        Double[] numb = new Double[Summ]; 
+
+        for (int i = 0; i < Summ; i++) {
+            System.out.print("Enter number " + (i + 1) + ": ");
+            numb[i] = input.nextDouble();
+        }
+
+        Double sum = 0.0;
+        Double diff = numb[0];
+        Double mul = 1.0;
+        Double quo = numb[0]; 
+
+        for (int i = 0; i < Summ; i++) {
+            sum += numb[i];
+            mul *= numb[i];
+            if (i > 0) { 
+                diff -= numb[i];
+            }
+        }
+
+        for (int i = 1; i < Summ; i++) { 
+            if (numb[i] != 0) {
+                quo /= numb[i];
+            } else {
+                System.out.println("Error! Division by zero.");
+                quo = null; 
+                break;
+            }
+        }
+
+        System.out.println("The sum is: " + sum);
+        System.out.println("The difference is: " + diff);
+        System.out.println("The product is: " + mul);
+        if (quo != null) {
+            System.out.println("The quotient is: " + quo);
+        }
+
+        input.close();
+    }
+}
