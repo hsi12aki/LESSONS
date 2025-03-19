@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class AllOperators{
+public static void main(String [] args){
+
+    Scanner scanner = new Scanner (System.in);
+    System.out.print("Enter the number of elements: ");
+    int n = scanner.nextInt();
+    
+    int[] sum = new int[n];
+    System.out.println("Enter number "+ n + ":");
+    for (int i=0; i<n; i++){
+        numbers[i] = scanner.nextInt();
+        
+    int sum = Summation(numbers);
+    System.out.println("The sum is: " + sum);
+    System.out.println("The difference is: " + sum);
+    System.out.println("The product is: " + sum);
+    System.out.println("The quotient is: " + sum);
+}
+}
+public static int Summation(int[] numbers){
+int sum = 0; 
+for (Integer num : numbers) {
+        sum += num;
+    }
+    return sum;
+}
+
+
+
+public static int add(int num1, int num2){
+    return num1 + num2;
+}
+public static int sub(int num1, int num2){
+    return num1 - num2;
+}
+public static int mul(int num1, int num2){
+    return num1 * num2;
+}
+public static int div(int num1, int num2){
+    return num1 / num2;
+}
+}
+//filename: FinalTerm_ACT3_COMPROG2_AMAQC_Alcazar, Denise
