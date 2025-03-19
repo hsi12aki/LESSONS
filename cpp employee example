@@ -1,4 +1,3 @@
-// Online C++ compiler to run C++ program online
 #include <iostream>
 #include <limits>
 using namespace std;
@@ -6,7 +5,7 @@ using namespace std;
 void InputSalaries (int salaries[], int numEmployees){
     for (int i=0; i<numEmployees; i++){
     while (true){
-        cout<<"Enter salaray for employee "<<i+1<<" :";
+        cout<<"Enter salary for employee "<<i+1<<" : ";
         cin>>salaries[i];
         if (cin.fail() || salaries [i] < 0){
             cout<<"Invalid input! Salary must be a non-negative number. \n";
@@ -41,6 +40,7 @@ int findMinSalary (int salaries[], int numEmployees){
             minSalary = salaries[i];
         }
     } return minSalary;
+}
 int main(){
     int numEmployees;
     cout<<"Enter the number of employees: ";
@@ -49,9 +49,8 @@ int main(){
         cout<<"Invalid number of employees: \n";
     }
     int salaries[numEmployees];
-    inputSalaries(salaries, numEmployees);
+    InputSalaries(salaries, numEmployees);
     cout<<"\nAverage Salary: "<<calculateAverage(salaries, numEmployees)<<endl;
     cout<<"Highest Salary: "<<findMaxSalary(salaries, numEmployees)<<endl;
     cout<<"Lowest Salary: "<<findMinSalary(salaries, numEmployees)<<endl;
-}
 }
