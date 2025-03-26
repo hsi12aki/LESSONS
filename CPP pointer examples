@@ -23,27 +23,34 @@ using namespace std;
 // //---> dynamic memory allocation
 // int main() {
 //  int* p = new int(42);
+//  cout<<p<<endl;
 //  delete p;
 //  int* arr = new int[5];
+//  cout<<arr<<endl;
 //  delete[] arr;
+// cout<<p<<endl;
+// cout<<arr;
 // }
+//once you delete p/arr, the actual value is deleted, to check the value you dereference p/arr (cout<<*p/*arr)
+//by deleting you can make all the memory addresses the same
 
 // //---> pointer to pointer (a pointer can store the address of another pointer)
 // int main() {
 // int a = 10;
-// int* p = &a;
-// int** pp = &p;
+// int* p = &a; //to create a pointer //memory allocation on a
+// int** pp = &p; //memory allocation of ur actual pointer //double ** is the pointer to pointer, like a for-each
 // cout<<**pp;
 // }
 
 // //---> function pointers
 // #include <iostream>
 // using namespace std;
-// void hello(){cout<<"Hello";}
-// int main(){
-//     void (*funcPtr)() = hello;
-//     funcPtr;
-// }
+void hello(){cout<<"Hello!";}
+int main(){
+    void (*funcptr)() = hello;//= hello???
+    funcptr;
+    cout<<"Hello!";
+}
 
 // //---> null and void pointer
 // //--> null
@@ -53,9 +60,9 @@ using namespace std;
 // }
 
 // //--> void
-int main(){ 
-    void*ptr;
-    int a = 5;
-    ptr = &a;
-    cout<<ptr;
-}
+// int main(){ 
+//     void*ptr;
+//     int a = 5;
+//     ptr = &a;
+//     cout<<ptr; //you cant dereference with void  (*ptr will be an error)                
+// }
