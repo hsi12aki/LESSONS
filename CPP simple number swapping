@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+void swap(int*a, int*b){
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int main() {
+    int num1, num2;
+    cout<<"Enter 1st number: ";
+    cin>>num1;
+    cout<<"Enter 2nd number: ";
+    cin>>num2;
+    swap (&num1, &num2);
+    cout<<endl<<"After swapping: "<<endl;
+    cout<<"1st number: "<<num1<<endl;
+    cout<<"2nd number: "<<num2<<endl;
+    
+    return 0;
+}
+
+
+
+//no need to submit this one, this will act as an reviewer
