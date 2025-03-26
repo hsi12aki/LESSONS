@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+void swap(int*a, int*b){
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int main() {
+    int num1, num2;
+    cout<<"Enter 1st number: ";
+    cin>>num1;
+    cout<<"Enter 2nd number: ";
+    cin>>num2;
+    swap (&num1, &num2);
+    
+    int* ptr = &num1;
+    int* btr = &num2;
+    
+    cout<<endl<<"After swapping: "<<endl;
+    cout<<"1st number: "<<*ptr<<endl;
+    cout<<"Memory address of 1st number: "<<&ptr<<endl<<endl;
+    cout<<"2nd number: "<<*btr<<endl;
+    cout<<"Memory address of 2nd number: "<<&btr<<endl;
+    
+    return 0;
+}
+
+
+
+//no need to submit this one, this will act as an reviewer
+//try mo ipasok sa loob ng 
