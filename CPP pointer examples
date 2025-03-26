@@ -1,8 +1,9 @@
 //comment and uncomment when needed (ctrl + /)
+
 #include <iostream>
 using namespace std;
 
-// // pointer
+// //---> pointer
 // int main() {
 //     int a = 10;
 //     int* ptr = &a; //pointer stores the address of 'a'
@@ -11,7 +12,7 @@ using namespace std;
 //     return 0;
 // }
 
-// //pointer arithmetic
+// //---> pointer arithmetic
 // int main() {
 //     int arr[] = {10, 20, 30};
 //     int* ptr = arr;
@@ -19,7 +20,7 @@ using namespace std;
 //     cout<<*ptr;
 // }
 
-// //dynamic memory allocation
+// //---> dynamic memory allocation
 // int main() {
 //  int* p = new int(42);
 //  delete p;
@@ -27,7 +28,7 @@ using namespace std;
 //  delete[] arr;
 // }
 
-// //pointer to pointer (a pointer can store the address of another pointer)
+// //---> pointer to pointer (a pointer can store the address of another pointer)
 // int main() {
 // int a = 10;
 // int* p = &a;
@@ -35,7 +36,7 @@ using namespace std;
 // cout<<**pp;
 // }
 
-// //function pointers
+// //---> function pointers
 // #include <iostream>
 // using namespace std;
 // void hello(){cout<<"Hello";}
@@ -44,14 +45,14 @@ using namespace std;
 //     funcPtr;
 // }
 
-// //null and void pointer
-// //null
+// //---> null and void pointer
+// //--> null
 // int main() {
 //     int*ptr = nullptr;
 //     cout<<ptr;
 // }
 
-// //void
+// //--> void
 int main(){ 
     void*ptr;
     int a = 5;
